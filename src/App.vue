@@ -2,14 +2,18 @@
 
 <script>
   export default {
-    name: 'app',
+    name: 'App',
     components: {},
   };
 </script>
 
 <template>
   <div id="app">
-    <img class="background-img" alt="App background" src="./assets/background.jpg"/>
+    <img
+      class="background-img"
+      alt="App background"
+      src="./assets/background.jpg"
+    >
     <div>
       <span>Teest</span>
     </div>
