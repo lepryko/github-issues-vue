@@ -16,6 +16,6 @@
       alt="Background image"
       src="./assets/background.jpg"
     >
-    <Window/>
+    <Window />
   </div>
 </template>
