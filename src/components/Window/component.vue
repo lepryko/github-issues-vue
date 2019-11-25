@@ -32,7 +32,7 @@
       :style="windowStyle"
     >
       <div class="window--system_buttons" />
-      <div class="window--navbar" />
+      <div class="window--sidebar" />
       <div class="window--content" />
     </div>
   </vue-draggable-resizable>
