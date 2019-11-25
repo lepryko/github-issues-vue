@@ -1,0 +1,29 @@
+.window {
+  display: grid;
+  grid-template-areas: "system-buttons  content"
+                       "sidebar         content";
+  grid-template-rows: 45px 1fr;
+  grid-template-columns: 150px 1fr;
+  min-width: 650px;
+  min-height: 500px;
+  overflow: hidden;
+  color: rgba(35, 35, 35, 0.99);
+  border-radius: 8px;
+  box-shadow: 0 0 12px .05px;
+
+  &--system_buttons {
+    grid-area: system-buttons;
+    background-color: black;
+  }
+
+  &--navbar {
+    grid-area: sidebar;
+    overflow: hidden;
+    background: rgba(2, 0, 22, 0.8);
+  }
+
+  &--content {
+    grid-area: content;
+    background-color: #dddddd;
+  }
+}

@@ -15,7 +15,8 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.13.0",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-draggable-resizable": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",

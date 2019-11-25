@@ -1,9 +1,11 @@
-<style src="./styles.scss" lang="scss"/>
+<style src="./style.scss" lang="scss"/>
 
 <script>
+  import Window from './components/Window/component';
+
   export default {
     name: 'App',
-    components: {},
+    components: { Window },
   };
 </script>
 
@@ -11,11 +13,9 @@
   <div id="app">
     <img
       class="background-img"
-      alt="App background"
+      alt="Background image"
       src="./assets/background.jpg"
     >
-    <div>
-      <span>Teest</span>
-    </div>
+    <Window/>
   </div>
 </template>
