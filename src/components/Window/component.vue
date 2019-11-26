@@ -3,13 +3,14 @@
 <script>
   import WindowSidebar from './Sidebar/component';
   import WindowSystemButtons from './SystemButtons/component';
+  import WindowContent from './Content/component';
 
   const windowMinHeight = 500;
   const windowMinWidth = 650;
 
   export default {
     name: 'Window',
-    components: { WindowSystemButtons, WindowSidebar },
+    components: { WindowContent, WindowSystemButtons, WindowSidebar },
     data: () => ({
       zIndex: 0,
       windowStyle: {
@@ -47,7 +48,7 @@
     >
       <WindowSystemButtons />
       <WindowSidebar />
-      <div class="window--content" />
+      <WindowContent />
     </div>
   </vue-draggable-resizable>
 </template>
