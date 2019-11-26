@@ -5,8 +5,8 @@
   import WindowSystemButtons from './SystemButtons/component';
   import WindowContent from './Content/component';
 
-  const windowMinHeight = 500;
-  const windowMinWidth = 650;
+  const windowHeight = 500;
+  const windowWidth = 650;
 
   export default {
     name: 'Window',
@@ -14,8 +14,10 @@
     data: () => ({
       zIndex: 0,
       windowStyle: {
-        'min-width': `${ windowMinWidth }px`,
-        'min-height': `${ windowMinHeight }px`,
+        'min-width': `${ windowWidth }px`,
+        'width': `${ windowWidth }px`,
+        'min-height': `${ windowHeight }px`,
+        'height': `${ windowHeight }px`,
       },
     }),
     methods: {
@@ -27,8 +29,8 @@
       },
     },
     computed: {
-      getX: () => (window.innerWidth - windowMinWidth) / 2,
-      getY: () => (window.innerHeight - windowMinHeight) / 2,
+      getX: () => (window.innerWidth - windowWidth) / 2,
+      getY: () => (window.innerHeight - windowHeight) / 2,
     },
   };
 </script>
