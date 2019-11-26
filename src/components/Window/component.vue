@@ -2,13 +2,14 @@
 
 <script>
   import WindowSidebar from './Sidebar/component';
+  import WindowSystemButtons from './SystemButtons/component';
 
   const windowMinHeight = 500;
   const windowMinWidth = 650;
 
   export default {
     name: 'Window',
-    components: { WindowSidebar },
+    components: { WindowSystemButtons, WindowSidebar },
     data: () => ({
       zIndex: 0,
       windowStyle: {
@@ -44,7 +45,7 @@
       class="window"
       :style="windowStyle"
     >
-      <div class="window--system_buttons" />
+      <WindowSystemButtons />
       <WindowSidebar />
       <div class="window--content" />
     </div>
