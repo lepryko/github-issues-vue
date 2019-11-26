@@ -14,12 +14,6 @@
     background-color: black;
   }
 
-  &--sidebar {
-    grid-area: sidebar;
-    overflow: hidden;
-    background: rgba(2, 0, 22, .8);
-  }
-
   &--content {
     grid-area: content;
     background-color: #dddddd;

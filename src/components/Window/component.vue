@@ -1,11 +1,14 @@
 <style src="./style.scss" lang="scss" />
 
 <script>
+  import WindowSidebar from './Sidebar/component';
+
   const windowMinHeight = 500;
   const windowMinWidth = 650;
 
   export default {
     name: 'Window',
+    components: { WindowSidebar },
     data: () => ({
       zIndex: 0,
       windowStyle: {
@@ -14,10 +17,10 @@
       },
     }),
     methods: {
-      onFocused(){
+      onFocused() {
         this.zIndex = 999;
       },
-      onFocusLost(){
+      onFocusLost() {
         this.zIndex = 0;
       },
     },
@@ -42,7 +45,7 @@
       :style="windowStyle"
     >
       <div class="window--system_buttons" />
-      <div class="window--sidebar" />
+      <WindowSidebar />
       <div class="window--content" />
     </div>
   </vue-draggable-resizable>
