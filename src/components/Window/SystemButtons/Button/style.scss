@@ -1,27 +1,33 @@
+$button-height: 10px;
+$button-width: $button-height;
+
 .system_button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10px;
-  min-width: 10px;
-  height: 10px;
-  min-height: 10px;
+  width: $button-width;
+  min-width: $button-width;
+  height: $button-height;
+  min-height: $button-height;
   border-radius: 50%;
   transition: height .1s ease-out, width .1s ease-out;
 
   & > svg {
     visibility: hidden;
+    opacity: 0;
   }
 
   &:hover {
-    width: 14px;
-    height: 14px;
+    width: calc(#{$button-width} + 4px);
+    height: calc(#{$button-width} + 4px);
     cursor: pointer;
 
     & > svg {
       color: black;
       font-size: 0.5rem;
       visibility: visible;
+      opacity: 1;
+      transition: visibility .1s ease-out 0s, opacity .2s ease-in .05s;
     }
   }
 
