@@ -4,16 +4,23 @@
   const windowMinHeight = 500;
   const windowMinWidth = 650;
 
-  const data = {
-    windowStyle: {
-      'min-width': `${ windowMinWidth }px`,
-      'min-height': `${ windowMinHeight }px`,
-    },
-  };
-
   export default {
     name: 'Window',
-    data: () => data,
+    data: () => ({
+      zIndex: 0,
+      windowStyle: {
+        'min-width': `${ windowMinWidth }px`,
+        'min-height': `${ windowMinHeight }px`,
+      },
+    }),
+    methods: {
+      onFocused(){
+        this.zIndex = 999;
+      },
+      onFocusLost(){
+        this.zIndex = 0;
+      },
+    },
     computed: {
       getX: () => (window.innerWidth - windowMinWidth) / 2,
       getY: () => (window.innerHeight - windowMinHeight) / 2,
@@ -26,6 +33,9 @@
     :resizable="false"
     :x="getX"
     :y="getY"
+    :z="zIndex"
+    @activated="onFocused"
+    @deactivated="onFocusLost"
   >
     <div
       class="window"
