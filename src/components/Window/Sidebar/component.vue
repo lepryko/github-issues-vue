@@ -7,6 +7,5 @@
 </script>
 
 <template>
-  <div class="window--sidebar">
-  </div>
+  <div class="window--sidebar" />
 </template>

@@ -2,10 +2,10 @@
 
 <script>
   export default {
-    name: 'WindowContent',
+    name: 'SystemButton',
   };
 </script>
 
 <template>
-  <div class="window--content" />
+  <div class="system_button system_button--close" />
 </template>

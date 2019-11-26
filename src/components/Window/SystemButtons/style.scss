@@ -1,6 +1,11 @@
 .window {
   &--system_buttons {
+    display: flex;
     grid-area: system-buttons;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
     background-color: black;
   }
 }

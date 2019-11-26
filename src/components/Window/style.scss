@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: "system-buttons  content"
                        "sidebar         content";
-  grid-template-rows: 45px 1fr;
+  grid-template-rows: 40px 1fr;
   grid-template-columns: 150px 1fr;
   overflow: hidden;
   color: rgba(35, 35, 35, .6);

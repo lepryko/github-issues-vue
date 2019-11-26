@@ -20,6 +20,10 @@
         'height': `${ windowHeight }px`,
       },
     }),
+    computed: {
+      getX: () => (window.innerWidth - windowWidth) / 2,
+      getY: () => (window.innerHeight - windowHeight) / 2,
+    },
     methods: {
       onFocused() {
         this.zIndex = 999;
@@ -27,10 +31,6 @@
       onFocusLost() {
         this.zIndex = 0;
       },
-    },
-    computed: {
-      getX: () => (window.innerWidth - windowWidth) / 2,
-      getY: () => (window.innerHeight - windowHeight) / 2,
     },
   };
 </script>
