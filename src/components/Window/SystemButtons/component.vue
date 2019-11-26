@@ -2,6 +2,7 @@
 
 <script>
   import SystemButton from './Button/component';
+
   export default {
     name: 'WindowSystemButtons',
     components: { SystemButton },
@@ -10,8 +11,8 @@
 
 <template>
   <div class="window--system_buttons">
-    <SystemButton />
-    <SystemButton />
-    <SystemButton />
+    <SystemButton :is-close-button="true" />
+    <SystemButton :is-minimize-button="true" />
+    <SystemButton :is-maximize-button="true" />
   </div>
 </template>

@@ -1,16 +1,43 @@
 .system_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 10px;
   min-width: 10px;
-  max-width: 10px;
   height: 10px;
   min-height: 10px;
   border-radius: 50%;
+  transition: height .1s ease-out, width .1s ease-out;
+
+  & > svg {
+    visibility: hidden;
+  }
+
+  &:hover {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+
+    & > svg {
+      color: black;
+      font-size: 0.5rem;
+      visibility: visible;
+    }
+  }
 
   &:not(:first-child) {
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
   &--close {
-    background: red;
+    background: #c9274b;
+  }
+
+  &--minimize {
+    background: #ffb42c;
+  }
+
+  &--maximize {
+    background: #00a300;
   }
 }
