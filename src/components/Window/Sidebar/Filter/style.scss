@@ -10,6 +10,10 @@
       cursor: pointer;
     }
 
+    &__selected {
+      background-color: rgb(47, 48, 80);
+    }
+
     &_name {
       overflow: hidden;
       color: white;

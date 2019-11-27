@@ -8,7 +8,7 @@
     name: 'WindowSidebar',
     components: { SidebarFilter },
     computed: {
-      ...mapState(['availableFilters']),
+      ...mapState(['availableStatusFilters']),
     },
   };
 </script>
@@ -16,7 +16,7 @@
 <template>
   <div class="window--sidebar">
     <SidebarFilter
-      v-for="filter in availableFilters"
+      v-for="filter in availableStatusFilters"
       :key="filter"
       :filter="filter"
     />
