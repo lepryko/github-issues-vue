@@ -2,9 +2,11 @@
 
 <script>
   import Window from './components/Window/component';
+  import store from './store';
 
   export default {
     name: 'App',
+    store: store,
     components: { Window },
   };
 </script>

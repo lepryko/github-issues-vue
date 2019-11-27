@@ -1,0 +1,33 @@
+.sidebar {
+  &--filter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 12px;
+
+    &:hover {
+      background-color: rgb(47, 48, 80);
+      cursor: pointer;
+    }
+
+    &_name {
+      overflow: hidden;
+      color: white;
+      font-weight: bold;
+      font-size: .9em;
+      white-space: nowrap;
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+
+      & > svg {
+        margin: 0 6px -2px;
+      }
+    }
+
+    &_counter {
+      margin-left: 12px;
+      color: #ababab;
+      font-size: .85em;
+    }
+  }
+}
