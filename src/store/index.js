@@ -3,6 +3,7 @@ import Vue from 'vue';
 import availableStatusFilters from '../constants/availableStatusFilters';
 import moment from 'moment';
 import uuid from 'uuid/v4';
+import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
 
@@ -19,7 +20,13 @@ const state = {
     { id: uuid(), title: 'Visual UI Update Review', favourite: false, date: moment('2016-07-18'), status: 'open' },
     { id: uuid(), title: 'Crash issue', favourite: true, date: moment('2016-07-14'), status: 'open' },
     { id: uuid(), title: 'Something went wrong', favourite: true, date: moment('2016-07-14'), status: 'open' },
-    { id: uuid(), title: 'Very long description, probably the longest you ever gonna see in you live.', favourite: true, date: moment('2016-07-14'), status: 'open' },
+    {
+      id: uuid(),
+      title: 'Very long description, probably the longest you ever gonna see in you live.',
+      favourite: true,
+      date: moment('2016-07-14'),
+      status: 'open',
+    },
     { id: uuid(), title: 'Visual update & Crash resolve', favourite: true, date: moment('2016-07-14'), status: 'open' },
   ],
 };
@@ -41,7 +48,7 @@ const store = new Vuex.Store({
     },
     changeIssueFavouriteStatus({ commit }, id) {
       commit('changeIssueFavouriteStatus', id);
-    }
+    },
   },
   getters: {
     getStatusIssues: state => status => {
@@ -51,13 +58,14 @@ const store = new Vuex.Store({
         return state.fetchedIssues.filter(issue => issue.status === status);
       }
     },
-    selectedIssues: (state, getters ) => {
+    selectedIssues: (state, getters) => {
       return getters.getStatusIssues(state.selectedStatusFilter);
     },
     getStatusFilterIssuesCount: (state, getters) => status => {
       return getters.getStatusIssues(status).length;
     },
   },
+  plugins: [createPersistedState()],
 });
 
 export default store;

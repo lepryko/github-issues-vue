@@ -23,6 +23,7 @@
     <GroupedIssues
       v-for="(issues, date) in groupedIssues"
       :key="date"
+      :date="date"
       :issues="issues"
     />
   </div>

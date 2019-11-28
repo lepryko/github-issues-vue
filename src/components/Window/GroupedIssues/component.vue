@@ -2,21 +2,26 @@
 
 <script>
   import Issue from '../Issue/component';
+  import moment from 'moment';
 
   export default {
     name: 'GroupedIssues',
     components: { Issue },
     props: {
+      date: {
+        type: String,
+        required: true,
+      },
       issues: {
         type: Array,
         required: true,
-      }
+      },
     },
     computed: {
       formattedDate() {
-        return this.issues[0].date.format("DD-MM-YYYY");
+        return moment(this.date).format('DD-MM-YYYY');
       },
-    }
+    },
   };
 </script>
 
