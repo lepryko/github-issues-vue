@@ -1,0 +1,41 @@
+$borderColor: #dadada;
+
+.issue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 3px 0;
+  padding: 10px;
+  color: black;
+  line-height: 1.1;
+  background-color: white;
+  border: 1px $borderColor solid;
+  border-radius: 6px;
+
+  &--title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &--favourite_star {
+    flex-shrink: 0;
+    margin: 0 8px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__selected {
+      path {
+        fill: black !important;
+      }
+    }
+
+    path {
+      fill: none;
+      stroke: $borderColor;
+    }
+  }
+}

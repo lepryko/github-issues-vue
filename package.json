@@ -14,15 +14,18 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "^0.1.8",
     "core-js": "^3.3.2",
+    "vue": "^2.6.10",
+    "vue-draggable-resizable": "^2.0.1",
+    "vuex": "^3.1.2",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
     "stylelint": "^12.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.13.0",
-    "vue": "^2.6.10",
-    "vue-draggable-resizable": "^2.0.1",
-    "vuex": "^3.1.2"
-  },
-  "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.5",
     "@vue/cli-service": "^4.0.0",

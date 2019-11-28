@@ -15,9 +15,6 @@
         required: true,
       },
     },
-    methods: {
-      ...mapMutations(['selectFilter']),
-    },
     computed: {
       isFilterSelected() {
         return this.$store.state.selectedStatusFilter === this.filter;
@@ -28,6 +25,9 @@
       iconName() {
         return `icon-${ this.filter }-issues`;
       },
+    },
+    methods: {
+      ...mapMutations(['selectFilter']),
     },
   };
 </script>

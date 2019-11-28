@@ -1,0 +1,19 @@
+.grouped_issues {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 16px;
+
+  &--title {
+    margin: 4px 0;
+    font-size: .75em;
+  }
+
+  &:last-child{
+    margin-bottom: 6px;
+  }
+
+  &:first-child {
+    margin-top: 6px;
+  }
+}

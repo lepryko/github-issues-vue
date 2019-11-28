@@ -1,6 +1,7 @@
 .window {
   &--content {
     grid-area: content;
+    overflow: scroll;
     background-color: rgb(246,246,246);
   }
 }
