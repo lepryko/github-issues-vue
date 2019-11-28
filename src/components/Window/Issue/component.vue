@@ -24,10 +24,10 @@
 
 <template>
   <div class="issue">
-    <span class="issue--title">{{ issue.title }}</span>
+    <span class="issue__title">{{ issue.title }}</span>
     <icon-star
-      class="issue--favourite_star"
-      :class="{'issue--favourite_star__selected': issue.favourite}"
+      class="issue__favourite_star"
+      :class="{'issue__favourite_star--selected': issue.favourite}"
       :on-click="toggleFavouriteFlag"
     />
   </div>

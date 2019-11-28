@@ -19,7 +19,7 @@
 </script>
 
 <template>
-  <div class="window--content">
+  <div class="window__content">
     <GroupedIssues
       v-for="(issues, date) in groupedIssues"
       :key="date"

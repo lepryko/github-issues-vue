@@ -13,13 +13,13 @@ $borderColor: #dadada;
   border: 1px $borderColor solid;
   border-radius: 6px;
 
-  &--title {
+  &__title {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  &--favourite_star {
+  &__favourite_star {
     flex-shrink: 0;
     margin: 0 8px;
 
@@ -27,7 +27,7 @@ $borderColor: #dadada;
       cursor: pointer;
     }
 
-    &__selected {
+    &--selected {
       path {
         fill: black !important;
       }

@@ -34,15 +34,15 @@
 
 <template>
   <div
-    class="sidebar--filter"
-    :class="{'sidebar--filter__selected': isFilterSelected}"
+    class="sidebar__filter"
+    :class="{'sidebar__filter--selected': isFilterSelected}"
     @click="selectFilter(filter) "
   >
-    <div class="sidebar--filter_name">
+    <div class="sidebar__filter_name">
       <component :is="iconName" />
       {{ filter }}
     </div>
-    <div class="sidebar--filter_counter">
+    <div class="sidebar__filter_counter">
       {{ issuesCount }}
     </div>
   </div>

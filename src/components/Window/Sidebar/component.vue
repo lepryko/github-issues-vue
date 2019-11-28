@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div class="window--sidebar">
+  <div class="window__sidebar">
     <SidebarFilter
       v-for="filter in availableStatusFilters"
       :key="filter"

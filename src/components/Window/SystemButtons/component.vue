@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <div class="window--system_buttons">
+  <div class="window__system_buttons">
     <SystemButton :is-close-button="true" />
     <SystemButton :is-minimize-button="true" />
     <SystemButton :is-maximize-button="true" />

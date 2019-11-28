@@ -27,7 +27,7 @@
 
 <template>
   <article class="grouped_issues">
-    <span class="grouped_issues--title"> {{ formattedDate }} </span>
+    <span class="grouped_issues__title"> {{ formattedDate }} </span>
     <Issue
       v-for="issue in issues"
       :key="issue.title"
