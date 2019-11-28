@@ -4,6 +4,7 @@ import availableStatusFilters from '../constants/availableStatusFilters';
 import moment from 'moment';
 import uuid from 'uuid/v4';
 import createPersistedState from 'vuex-persistedstate';
+import { find } from 'lodash';
 
 Vue.use(Vuex);
 
@@ -38,7 +39,7 @@ const store = new Vuex.Store({
       state.selectedStatusFilter = filter;
     },
     changeIssueFavouriteStatus(state, id) {
-      let foundIssue = state.fetchedIssues.find(issue => issue.id === id);
+      let foundIssue = find(state.fetchedIssues, { id });
       foundIssue.favourite = !foundIssue.favourite;
     },
   },
