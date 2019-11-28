@@ -27,7 +27,7 @@ $button-width: $button-height;
       font-size: 0.5rem;
       visibility: visible;
       opacity: 1;
-      transition: visibility .1s ease-out 0s, opacity .2s ease-in .05s;
+      transition: visibility .1s ease-out, opacity .2s ease-in .05s;
     }
   }
 
